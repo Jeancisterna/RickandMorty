@@ -14,12 +14,7 @@ namespace RickandMorty.Controllers
 			_logger = logger;
 		}
 
-		public IActionResult Index()
-		{
-			return View();
-		}
-
-		public async Task<IActionResult> Privacy()
+		public async Task<IActionResult> Index()
 		{
 			string url = "https://rickandmortyapi.com/api/character";
 			var client = new HttpClient();
@@ -28,7 +23,13 @@ namespace RickandMorty.Controllers
 			var rick = JsonSerializer.Deserialize<Root>(body);
 
 
-			return View("Privacy",rick);
+			return View("Index", rick);
+			
+		}
+
+		public async Task<IActionResult> Privacy()
+		{
+			return View("Privacy");
 		}
 
 		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

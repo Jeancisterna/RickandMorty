@@ -1,8 +1,32 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿<link href="~/css/site.css" rel="stylesheet" />
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+@model Root 
+
+<div>
+	<h1 class="titulo">Tarjetas Rick </h1>
 </div>
+<div class="d-flex">
+	@foreach (var rick in Model.results)
+	{
+		
+		<div class="card" style="width: 18rem;">
+			<img src="@rick.image" class="card-img-top" alt="...">
+			<div class="card-body">
+				<h5 class="card-title">@rick.name</h5>
+				<p class="card-text">@rick.status</p>
+				<p class="card-text">@rick.gender</p>
+				<p class="card-text">@rick.type</p>
+				<a href="#" class="btn btn-primary">Aqui</a>
+			</div>
+		</div>
+	}
+</div>
+
+	
+
+
+
+
+
+

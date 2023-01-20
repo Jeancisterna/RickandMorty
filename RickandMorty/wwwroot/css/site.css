@@ -9,10 +9,38 @@ html {
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
+    
 }
 
 body {
-  margin-bottom: 60px;
+    background: url(https://www.xtrafondos.com/wallpapers/vertical/rick-y-morty-fanart-2020-6344.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+h5.card-title {
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 7px;
+    text-align: center;
+}
+p.card-text{
+
+}
+.d-flex {
+    flex-wrap:wrap;
+}
+div.card{
+    margin:10px;
+}
+.btn btn-primary {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+h1.titulo{
+
+    text-align:center;
+    color:aqua;
 }
